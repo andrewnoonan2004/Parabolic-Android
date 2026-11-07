@@ -5,6 +5,7 @@ plugins {
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt)
+    alias(libs.plugins.play.publisher)
 }
 android {
     namespace = "org.parabolic.android"
@@ -28,13 +29,32 @@ android {
         jniLibs.useLegacyPackaging = true
         resources.excludes += setOf("META-INF/DEPENDENCIES", "META-INF/LICENSE*", "META-INF/NOTICE*")
     }
+    signingConfigs {
+        create("upload") {
+            storeFile = file(System.getenv("ANDROID_UPLOAD_KEYSTORE_PATH") ?: "upload-key.jks")
+            storePassword = System.getenv("ANDROID_UPLOAD_KEYSTORE_PASSWORD")
+            keyAlias = System.getenv("ANDROID_UPLOAD_KEY_ALIAS")
+            keyPassword = System.getenv("ANDROID_UPLOAD_KEY_PASSWORD")
+            enableV1Signing = true
+            enableV2Signing = true
+            enableV3Signing = true
+        }
+    }
     buildTypes {
         release {
+            val uploadConfig = signingConfigs.getByName("upload")
+            if (uploadConfig.storeFile?.exists() == true && !uploadConfig.storePassword.isNullOrBlank()) {
+                signingConfig = uploadConfig
+            }
             isMinifyEnabled = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
     lint { abortOnError = true }
+}
+play {
+    serviceAccountCredentials.set(file(System.getenv("ANDROID_PLAY_CREDENTIALS_PATH") ?: "play-store-keys.json"))
+    track.set("internal")
 }
 kotlin { jvmToolchain(17) }
 ksp { arg("room.schemaLocation", "$projectDir/schemas") }

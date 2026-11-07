@@ -6,3 +6,4 @@ local.properties
 .idea/
 *.jks
 *.keystore
+play-store-keys.json
