@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Parabolic</string>
+    <string name="download_channel">Downloads</string>
+    <string name="download_notification">Downloading media</string>
+    <string name="download_waiting">Waiting for a download slot</string>
+    <string name="download_processing">Preparing or processing media</string>
+    <string name="download_exporting">Saving files</string>
+    <string name="cancel">Cancel</string>
+</resources>
