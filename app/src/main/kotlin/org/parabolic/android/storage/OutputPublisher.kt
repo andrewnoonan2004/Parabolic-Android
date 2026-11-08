@@ -75,7 +75,7 @@ class OutputPublisher @Inject constructor(
                 context.contentResolver.insert(MediaStore.Downloads.EXTERNAL_CONTENT_URI, ContentValues().apply {
                     put(MediaStore.Downloads.DISPLAY_NAME, file.name)
                     put(MediaStore.Downloads.MIME_TYPE, mime)
-                    put(MediaStore.Downloads.RELATIVE_PATH, "${Environment.DIRECTORY_DOWNLOADS}/Parabolic")
+                    put(MediaStore.Downloads.RELATIVE_PATH, "${Environment.DIRECTORY_DOWNLOADS}/CrestWave")
                     put(MediaStore.Downloads.IS_PENDING, 1)
                 }) ?: error("Cannot create an entry in Downloads")
             }

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Parabolic</string>
+    <string name="app_name">CrestWave</string>
     <string name="download_channel">Downloads</string>
     <string name="download_notification">Downloading media</string>
     <string name="download_waiting">Waiting for a download slot</string>

@@ -14,9 +14,9 @@ android {
         applicationId = "org.parabolic.android"
         minSdk = 26
         targetSdk = 36
-        versionCode = 6
-        versionName = "1.0.4"
-        setProperty("archivesBaseName", "Parabolic")
+        versionCode = 7
+        versionName = "1.0.5"
+        setProperty("archivesBaseName", "CrestWave")
         ndk { abiFilters += listOf("arm64-v8a", "armeabi-v7a", "x86_64", "x86") }
     }
     buildFeatures { compose = true }

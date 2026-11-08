@@ -1,4 +1,28 @@
-<vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="48dp" android:height="48dp" android:viewportWidth="48" android:viewportHeight="48">
-    <path android:fillColor="#EADDFF" android:pathData="M12,0H36Q48,0 48,12V36Q48,48 36,48H12Q0,48 0,36V12Q0,0 12,0" />
-    <path android:fillColor="#4F378B" android:pathData="M20,10H28V24H35L24,35 13,24H20ZM12,38H36V42H12Z" />
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Squircle container -->
+    <path
+        android:fillColor="#0D1B2A"
+        android:pathData="M12,0H36Q48,0 48,12V36Q48,48 36,48H12Q0,48 0,36V12Q0,0 12,0" />
+    <!-- Cresting wave line -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#48CAE4"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:pathData="M10,24 C14,14 22,12 28,14 C34,16 38,20 40,20" />
+    <!-- Center download arrow -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M22,19 h4 v8 h4 L24,33 L18,27 h4 Z" />
+    <!-- Dock base -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#2EC4B6"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:pathData="M16,37 C20,39 28,39 32,37" />
 </vector>

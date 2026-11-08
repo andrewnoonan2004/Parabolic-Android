@@ -762,7 +762,7 @@ fun AddDownloadSheet(
                                 Text("Destination Folder", style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.Medium)
                                 Text(
                                     text = draft.destinationTreeUri
-                                        ?: if (Build.VERSION.SDK_INT >= 29) "Downloads/Parabolic (MediaStore)"
+                                        ?: if (Build.VERSION.SDK_INT >= 29) "Downloads/CrestWave (MediaStore)"
                                         else "SAF folder required on Android 8/9",
                                     style = MaterialTheme.typography.bodySmall,
                                     color = MaterialTheme.colorScheme.onSurfaceVariant,

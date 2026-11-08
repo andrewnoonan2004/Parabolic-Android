@@ -410,7 +410,7 @@ fun SettingsScreen(
                 )
                 Text(
                     text = prefs.defaultFolderUri
-                        ?: if (Build.VERSION.SDK_INT >= 29) "Downloads/Parabolic (MediaStore)"
+                        ?: if (Build.VERSION.SDK_INT >= 29) "Downloads/CrestWave (MediaStore)"
                         else "SAF folder required on Android 8 and 9",
                     style = MaterialTheme.typography.bodyMedium,
                     maxLines = 2,

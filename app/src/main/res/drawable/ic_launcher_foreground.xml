@@ -3,19 +3,43 @@
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
-    <!-- Parabolic arc -->
+
+    <!-- Secondary background wave crest with teal glow -->
     <path
         android:fillColor="#00000000"
-        android:strokeColor="#9CF1F0"
+        android:strokeColor="#2EC4B6"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:pathData="M24,42 C38,24 64,28 78,40" />
+
+    <!-- Dynamic cresting wave shape -->
+    <path
+        android:fillColor="#1F4E79"
+        android:pathData="M26,62 C34,42 46,36 58,40 C66,43 72,50 82,54 C84,55 86,52 84,50 C74,40 64,30 52,30 C36,30 24,46 22,64 C22,66 25,66 26,62 Z" />
+
+    <!-- Brilliant cyan crest rim -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#48CAE4"
         android:strokeWidth="5"
         android:strokeLineCap="round"
-        android:pathData="M30,42 Q54,24 78,42" />
-    <!-- Download arrow -->
+        android:pathData="M24,62 C28,48 40,34 54,34 C64,34 74,42 84,46" />
+
+    <!-- Streamlined downward download arrow nestled in the wave crest -->
     <path
-        android:fillColor="#EADDFF"
-        android:pathData="M48,34h12v22h11L54,73 37,56h11z" />
-    <!-- Base tray -->
+        android:fillColor="#FFFFFF"
+        android:pathData="M51,46 h6 v15 h8 L54,73 L43,61 h8 Z" />
+
+    <!-- Stylized curved water landing dock / tray -->
     <path
-        android:fillColor="#9CF1F0"
-        android:pathData="M36,77h36v5H36z" />
+        android:fillColor="#00000000"
+        android:strokeColor="#00B4D8"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:pathData="M35,78 C42,82 66,82 73,78" />
+
+    <!-- Energy droplet accent -->
+    <path
+        android:fillColor="#90E0EF"
+        android:pathData="M78,34 C78,32 80,30 81,30 C82,30 84,32 84,34 C84,36 82,37 81,37 C80,37 78,36 78,34 Z" />
 </vector>

@@ -358,12 +358,12 @@ private fun ParabolicHeaderBar(
                     }
                 }
 
-                // Centered title: "Parabolic"
+                // Centered title: "CrestWave"
                 val headerTitle = when {
                     showAddDownload && destination == TopDestination.DOWNLOADS -> "Add Download"
                     destination == TopDestination.AUTH -> "Keyring"
                     destination == TopDestination.SETTINGS -> "Preferences"
-                    else -> "Parabolic"
+                    else -> "CrestWave"
                 }
                 Text(
                     text = headerTitle,

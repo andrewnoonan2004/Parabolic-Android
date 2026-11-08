@@ -150,7 +150,8 @@ private tailrec fun Context.findActivity(): Activity? = when (this) {
 }
 
 /**
- * Google Material 3 Expressive tonal download emblem matching the tonal buttons on the homepage.
+ * CrestWave Material 3 Expressive emblem combining stylized cresting wave geometries,
+ * an oceanic teal gradient, and an integrated download chevron.
  */
 @Composable
 fun ParabolicDishEmblem(modifier: Modifier = Modifier) {
@@ -164,11 +165,49 @@ fun ParabolicDishEmblem(modifier: Modifier = Modifier) {
             modifier = Modifier.fillMaxSize(),
             contentAlignment = Alignment.Center,
         ) {
-            Icon(
-                imageVector = ParabolicIcons.Download,
-                contentDescription = "Download Media",
-                modifier = Modifier.size(56.dp),
-            )
+            Canvas(modifier = Modifier.size(64.dp)) {
+                val w = size.width
+                val h = size.height
+
+                // Fluid wave crest curve
+                val wavePath = Path().apply {
+                    moveTo(w * 0.15f, h * 0.58f)
+                    cubicTo(w * 0.32f, h * 0.38f, w * 0.48f, h * 0.36f, w * 0.62f, h * 0.44f)
+                    cubicTo(w * 0.72f, h * 0.50f, w * 0.80f, h * 0.54f, w * 0.88f, h * 0.52f)
+                }
+                drawPath(
+                    path = wavePath,
+                    color = Color(0xFF2EC4B6),
+                    style = Stroke(width = w * 0.07f, cap = StrokeCap.Round),
+                )
+
+                // Secondary subtle swell curve
+                val swellPath = Path().apply {
+                    moveTo(w * 0.22f, h * 0.70f)
+                    cubicTo(w * 0.40f, h * 0.58f, w * 0.60f, h * 0.64f, w * 0.78f, h * 0.68f)
+                }
+                drawPath(
+                    path = swellPath,
+                    color = Color(0xFF48CAE4),
+                    style = Stroke(width = w * 0.05f, cap = StrokeCap.Round),
+                )
+
+                // Download chevron pointing downward through the crest
+                val arrowPath = Path().apply {
+                    moveTo(w * 0.43f, h * 0.22f)
+                    lineTo(w * 0.57f, h * 0.22f)
+                    lineTo(w * 0.57f, h * 0.46f)
+                    lineTo(w * 0.68f, h * 0.46f)
+                    lineTo(w * 0.50f, h * 0.66f)
+                    lineTo(w * 0.32f, h * 0.46f)
+                    lineTo(w * 0.43f, h * 0.46f)
+                    close()
+                }
+                drawPath(
+                    path = arrowPath,
+                    color = Color.White,
+                )
+            }
         }
     }
 }

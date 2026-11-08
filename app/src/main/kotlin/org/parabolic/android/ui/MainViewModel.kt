@@ -421,7 +421,7 @@ class MainViewModel @Inject constructor(
             _localState.update { state ->
                 state.copy(draft = state.draft.copy(destinationTreeUri = null))
             }
-            postMessage("Reverted to system Downloads/Parabolic")
+            postMessage("Reverted to system Downloads/CrestWave")
         }
     }
 

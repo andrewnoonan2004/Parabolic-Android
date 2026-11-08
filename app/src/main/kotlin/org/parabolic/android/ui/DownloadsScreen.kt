@@ -706,7 +706,7 @@ private fun QueueDetailPane(
                             style = MaterialTheme.typography.bodySmall,
                         )
                         val destText = when (val d = spec.destination) {
-                            Destination.Downloads -> "Destination: Downloads/Parabolic"
+                            Destination.Downloads -> "Destination: Downloads/CrestWave"
                             is Destination.Tree -> "Destination: ${d.uri}"
                         }
                         Text(
